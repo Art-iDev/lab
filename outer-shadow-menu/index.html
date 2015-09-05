@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Menu com drop shadow | Art-i HTML5/CSS3/JS lab</title>
+    <meta name='description' content='Aprenda a fazer um menu com item projetado em 3D, usando elementos HTML5 e efeitos de sombra em CSS3'>
+    <link rel='stylesheet' href='./style.css'>
+</head>
+<body>
+<div class='example-wrapper'>
+    <nav id='nav'>
+        <div class='back-target'>
+            <ul>
+                <li id='test-1' class='target'>
+                    <a href='#test-1' title='home'>
+                        <span>
+                            home
+                        </span>
+                    </a>
+                </li>
+                <li id='test-2'>
+                    <a href='#test-2' title='work'>
+                        <span>
+                            work
+                        </span>
+                    </a>
+                </li>
+                <li id='test-3'>
+                    <a href='#test-3' title='about'>
+                        <span>
+                            about
+                        </span>
+                    </a>
+                </li>
+                <li id='test-4'>
+                    <a href='#test-4' title='contact'>
+                        <span>
+                            contact
+                        </span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', DOMHasLoaded);
+function DOMHasLoaded(){
+    var buttons = nav.querySelectorAll('.back-target li');
+    for(var i=0;i<buttons.length;i++)
+        buttons[i].addEventListener('click', manipulateButton);
+}
+function manipulateButton(e){
+    document.querySelector('.target').classList.remove('target');
+    e.currentTarget.classList.add('target');
+}
+</script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script>
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-34061052-1');ga('send','pageview');
+</script>
+</body>
+</html>
